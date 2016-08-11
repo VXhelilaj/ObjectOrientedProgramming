@@ -33,15 +33,14 @@ class Paperboy
       @earnings += beg_pay
       @experience += total_stops
       return beg_pay
-
       end
     end
-  end
 
-  def report
-  end
+      def report
+      "I'm #{@name}, I've delievered #{@experience} and I've earned $#{@earnings}."
+      end
 
-
+end
 end
 
 
@@ -53,3 +52,6 @@ p b.quota
 
 p a.deliver(101, 300)
 p b.deliver(100, 200)
+
+p a.report
+p b.report
