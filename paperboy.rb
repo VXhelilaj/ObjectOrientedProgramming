@@ -8,21 +8,23 @@ class Paperboy
     @earnings = #?????
 
 
-    def quota
-      "#{@experience/2 + 50}"
-    end
 
-    def deliver
-    end
+  def quota
+    @experience/2 + 50
+  end
 
-    def report
-    end
+  def deliver
+  end
+
+  def report
+  end
 
 
 end
+end
 
-a = ("Billy", 10, "Even")
-b = ("Johnny", 20, "Odd")
+a = Paperboy.new("Billy", 10, "Even")
+b = Paperboy.new("Johnny", 20, "Odd")
 
-p a.Paperboy
-p b.Paperboy
+p a.quota
+p b.quota
