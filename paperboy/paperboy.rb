@@ -13,7 +13,8 @@ class Paperboy
     @experience/2 + 50
   end
 
-  def deliver
+  def deliver(start_address, end_address)
+    
   end
 
   def report
@@ -23,8 +24,8 @@ class Paperboy
 end
 end
 
-a = Paperboy.new("Billy", 10, "Even")
-b = Paperboy.new("Johnny", 20, "Odd")
+a = Paperboy.new("Billy", 10, 11)
+b = Paperboy.new("Johnny", 20, 20)
 
 p a.quota
 p b.quota
