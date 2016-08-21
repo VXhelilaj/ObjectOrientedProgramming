@@ -17,6 +17,15 @@ class Rover
 #      case "L"
 #  end
 
+def move
+  case @dir
+   when "N" then @y += 1
+   when "S" then @y -= 1
+   when "E" then @y += 1
+   when "W" then @x -= 1
+  end
+end  
+
 def turn(direction)
   if direction == "L" && @dir == "N"
     @dir = "W"
