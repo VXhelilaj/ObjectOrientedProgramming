@@ -52,11 +52,15 @@ def move
   end
 end
 
- def output
+ def reads
    puts "#{@x}, #{@y}, #{@dir}"
  end
 end
 
 rover = Rover.new(1, 2, "N")
 rover.read_instructions("LMLMLMLMM")
-rover.output
+rover.reads
+
+rover2 = Rover.new(3, 3, "E")
+rover.read_instructions("MMRMMRMRRM")
+rover2.reads
