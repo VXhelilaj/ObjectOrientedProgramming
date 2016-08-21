@@ -12,16 +12,16 @@ class Rover
     @dir = dir
   end
 
-  def read_inputs(letter)
-    letter.split("").each do |command|
+  def read_instructions(letter)
+    letter.split("").each do |direction|
       case direction
       when "R" then self.turn("R")
       when "L" then self.turn("L")
       when "M" then self.move
       end
-    return "#{@X}, #{@y}, #{@dir}"
+    end
+    return "#{@x}, #{@y}, #{@dir}"
   end
-
 
 def turn(direction)
   if direction == "L" && @dir == "N"
@@ -47,7 +47,16 @@ def move
   case @dir
    when "N" then @y += 1
    when "S" then @y -= 1
-   when "E" then @y += 1
+   when "E" then @x += 1
    when "W" then @x -= 1
   end
 end
+
+ def output
+   puts "#{@x}, #{@y}, #{@dir}"
+ end
+end
+
+rover = Rover.new(1, 2, "N")
+rover.read_instructions("LMLMLMLMM")
+rover.output
